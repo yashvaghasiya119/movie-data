@@ -1,0 +1,24 @@
+.route{
+    width: 100vw;
+    height: 100vh;
+}
+.home{
+    width: 100%;
+    height: 100%;
+    background-color: #1f1e24;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    border-right: 2px solid  rgb(190,184,185);
+}
+.left-span-1{
+color: white;
+font-size: 1.5vw;
+font-weight: 600    ;
+}
+.right{
+    width: 80%;
+    height: 100%;
+}

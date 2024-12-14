@@ -1,6 +1,11 @@
+import { Sildebar } from "../componet/sildebar"
+
 export function Home(){
     document.title = "Home page"
     return<>
-    <h2>Home</h2>
+   <div className="home">
+    <Sildebar/>
+    <div className="right">ds</div>
+   </div>
     </>
 }
