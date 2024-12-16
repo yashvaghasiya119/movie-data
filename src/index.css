@@ -8,6 +8,7 @@
     background-color: #1f1e24;
     display: flex;
 }
+/* //left side  */
 .left{
     width: 20%;
     height: 100%;
@@ -20,16 +21,17 @@ font-weight: 600    ;
 }
 .left-span-2{
     color: white;
-    margin-bottom: 14vw;
+    /* margin-bottom: 14vw; */
+    margin-top: 2vh;
     margin-left: 2vw;
-    font-size: 1.4;
+    font-size: 1.2vw;
 }
 .all-links{
     display: flex;
     flex-direction: column;
     text-decoration: none;
     gap: 2vh;
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
     margin-top: 2vw;
     font-size: 1vw;
 }
@@ -39,15 +41,19 @@ font-weight: 600    ;
     text-decoration: none;
     padding: 1.4vw;
     width: 70%;
-
-    /* height: 2.5vw; */
+    height: 1.2vw;
 }
 .link:hover{
-    background-color: #6556cd;
+    background-color: rgb(101, 86, 205,0.5);
     text-decoration: none;
     transition: all 1s;
 }
-
+.left-main{
+    margin-left: 2vw;
+}
+.gap{
+    margin-right: .5vw;
+}
 
 
 
@@ -56,3 +62,12 @@ font-weight: 600    ;
     width: 80%;
     height: 100%;
 }
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+

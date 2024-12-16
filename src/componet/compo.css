@@ -1,0 +1,53 @@
+.navi-main{
+    color: white;
+    width: 70%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 20vw;
+}
+.navi-main input{
+    width: 29vw;
+    height: 4vh; 
+    /* border-radius: 50px; */
+    padding-left: 2%;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #d3d0d0;
+    font-size: 1.1vw;
+    border-bottom: 2px solid #d3d0d0;
+}
+.nav-icon{
+    font-size: 2vw;
+    margin: 0 1.3vw;
+}
+.searchitem{
+    max-width: 40vw;
+    max-height: 50%;
+    margin: auto;
+    /* background-color: rgb(233, 231, 232,0.9); */
+    background-color: #f3f5f6;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.navlink{
+    display: flex;
+    gap: 1vw;
+    width: 100%;
+    text-decoration: none;
+    padding: 1vw 0;
+    transition: all .5s;
+}
+.navlink:hover{
+    background-color: rgb(233, 231, 232,1);
+}
+.navlink img{
+    width: 3vw;
+    height: 7vh;
+
+    padding-left: 2vw;
+}
