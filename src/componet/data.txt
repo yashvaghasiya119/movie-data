@@ -1,0 +1,13 @@
+<div className="searchitem">
+{data1.length > 0 ? (
+  data1.map((cur, index) => (
+    <Link key={index} className="navlink">
+      <img src={`https://image.tmdb.org/t/p/original/${cur.backdrop_path || cur.profile_path}`} />
+      <span>{cur.name || cur.title || cur.original_name || cur.original_title}</span>
+      {/* <hr style={{ border: "2px solid grey ", width: "100%", marginTop: 0 }} /> */}
+    </Link>
+  ))
+) : (
+  <p>No results found</p>
+)}
+</div>

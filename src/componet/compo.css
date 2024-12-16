@@ -46,8 +46,12 @@
     background-color: rgb(233, 231, 232,1);
 }
 .navlink img{
-    width: 3vw;
-    height: 7vh;
-
+    width: 8vw;
+    height: 10vh;
+    object-fit: cover;
     padding-left: 2vw;
+}
+.navlink span {
+    text-align: center;
+    margin-top: 3vh;
 }
