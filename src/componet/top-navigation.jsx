@@ -108,14 +108,14 @@ export function Navigation() {
       </div>
       <div className="searchitem">
       
-          {data1.length > 0 ?data1.map((cur, index) => (
+          {icon ?data1.map((cur, index) => (
             <Link key={index} className="navlink">
               <img src={ cur.backdrop_path || cur.profile_path ? `https://image.tmdb.org/t/p/original/${cur.backdrop_path || cur.profile_path} ` : noimg}  />
               <span>{cur.name || cur.title || cur.original_name || cur.original_title}</span>
-              {/* <hr style={{ border: "2px solid grey ", width: "100%", marginTop: 0 }} /> */}
             </Link>
+              // {/* <hr style={{ border: "2px solid grey ", width: "100%", marginTop: 0 }} /> */}
           ))
-      :"  " }
+      :" " }
       </div>
     </>
   );
