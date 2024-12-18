@@ -1,13 +1,14 @@
 import { Link } from 'react-router';
 import './compo.css'
+import { Dropdown } from './dropdown';
 
 export function Trandingcard({data}){
 console.log(data);
 
     return<>
     <div className="tranding-main-card">
-        <h1 className='trandig_heading'>Tranding</h1>
-        <div className="cardpices">
+     
+        <div className="cardpices"> 
             { data && data.map((cur,index)=>{
                 return <div key={index} className='all_tranding_cards'>
                     <img className='tranding_img' src={`https://image.tmdb.org/t/p/original/${cur.backdrop_path || cur.poster_path}`} alt="" />

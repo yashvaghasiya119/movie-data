@@ -17,14 +17,13 @@ export function Header({ data }) {
 
         }} >
             <div className="header_box">
-                <img src="" alt="" />
                 <h1>{data.name || data.title || data.original_name || data.original_title}</h1>
                 <p>{data.overview.slice(0, 250)} <Link style={{ color: "#6556cd" }}>more...</Link></p>
                 <p className='second_pera_header'>
                     <span className='header_span_1'> <i className="ri-calendar-schedule-fill ic"></i> {data.release_date || "No Information"}</span>
                     <span className='header_span_1'> <i className="ri-movie-2-fill ic icon2"></i> {data.media_type}</span>
                 </p>
-               <button className='trailer'> <Link className='trailer_link' >Watch Trailer</Link></button>
+               <button className='trailer-btn'> <Link className='trailer_link' >Watch Trailer</Link></button>
             </div>
         </div>
     </>
