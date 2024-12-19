@@ -5,6 +5,7 @@ import { da } from "../componet/axiosdata"
 import { Header } from "../componet/header"
 import { Trandingcard } from "../componet/tranding"
 import { Dropdown } from "../componet/dropdown"
+import {Loader} from "../componet/loading"
 
 export function Home() {
   document.title = "Home page"
@@ -51,6 +52,6 @@ export function Home() {
         <Trandingcard data={tranding}  catagory={setcatogary}/>
       </div>
     </div>
-      : <h2>Loading..</h2>}
+      : <Loader/>}
   </>
 }
