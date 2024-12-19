@@ -5,14 +5,14 @@ import { da } from "../componet/axiosdata"
 import { Header } from "../componet/header"
 import { Trandingcard } from "../componet/tranding"
 import { Dropdown } from "../componet/dropdown"
-import {Loader} from "../componet/loading"
+import { Loader } from "../componet/loading"
 
 export function Home() {
   document.title = "Home page"
 
   let [wallpaper, setwallpaper] = useState(null)
-  let [tranding,setTranding]=useState(null)
-  let [catagory,setcatogary]=useState("all")
+  let [tranding, setTranding] = useState(null)
+  let [catagory, setcatogary] = useState("all")
 
   async function wallpaperfunc() {
     try {
@@ -31,7 +31,7 @@ export function Home() {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     !wallpaper && wallpaperfunc()
   }, [])
@@ -46,12 +46,12 @@ export function Home() {
         <Navigation />
         <Header data={wallpaper} />
         <div className="drop-box">
-     <h1 className='trandig_heading'>Tranding</h1>
-     <Dropdown title="filter" options={["tv","movie","all"]}  func={(e)=>setcatogary(e.target.value)} />
-     </div>
-        <Trandingcard data={tranding}  catagory={setcatogary}/>
+          <h1 className='trandig_heading'>Tranding</h1>
+          <Dropdown title="filter" options={["tv", "movie", "all"]} func={(e) => setcatogary(e.target.value)} />
+        </div>
+        <Trandingcard data={tranding} catagory={setcatogary} />
       </div>
     </div>
-      : <Loader/>}
+      : <Loader />}
   </>
 }

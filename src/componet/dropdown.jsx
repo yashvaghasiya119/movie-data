@@ -2,7 +2,6 @@ import { current } from "@reduxjs/toolkit";
 import './compo.css'
 
 export function Dropdown({ title, options,func }) {
-console.log(func);
 
     return <>
         <div className="select" style={{marginRight:"2vw"}}>

@@ -105,7 +105,6 @@ export function Navigation() {
             onClick={() => setquery("")}
           ></i>
         )}
-      </div>
       <div className="searchitem">
       
           {icon ?data1.map((cur, index) => (
@@ -116,6 +115,7 @@ export function Navigation() {
               // {/* <hr style={{ border: "2px solid grey ", width: "100%", marginTop: 0 }} /> */}
           ))
       :" " }
+      </div>
       </div>
     </>
   );

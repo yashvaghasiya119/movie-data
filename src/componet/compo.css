@@ -1,7 +1,7 @@
 .navi-main {
     color: white;
     width: 70%;
-    height: 15vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -36,7 +36,9 @@
     overflow-y: auto;
     border-radius: 5px;
     position: absolute;
-    left: 39%;
+    /* margin-left: 19vw; */
+    margin-top: 56vh; 
+    z-index: 1;
 }
 
 .navlink {
@@ -160,6 +162,7 @@
     min-width: 90%;
     height: 50%;
     object-fit: cover;
+    max-width: 90%;
 }
 
 .all_tranding_cards h1 {
@@ -195,7 +198,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+select h1 {
     font-size: 1.8rem;
     color: #333;
     margin-bottom: 15px;
@@ -243,4 +246,45 @@ select {
     justify-content: center;
     background-color: black;
     align-items: center;
+}
+@media (max-width:500px )  {
+    .all_tranding_cards{
+        min-width: 50%;
+    }
+}
+
+/* Tranding page  */
+.t-page-main{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+.t-page-heading{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 2vw 2vw;
+    font-size: 1.5vw;
+    width: 100%;
+    height: 8vh;
+}
+.t-page-heading i:hover{
+    color: #6556cd;
+}
+
+/* TRanding pagecard css  */
+.s-tranding-main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.s-tranding-loop{
+    width: 100%;
+    height: 100%;
+}
+.s-tranding-loop img{
+    width: 10%;
+    height: 10%;
 }

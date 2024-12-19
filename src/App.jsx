@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router"
 import { Home } from "./AllRouts/home"
+import { Tranding } from "./componet/trandingdata"
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   <div className="route">
   <Routes>
     <Route path="/" element={<Home/>}/>
+    <Route path="/trandingdata" element={<Tranding/>}/>
   </Routes>
   </div>
   </>
