@@ -2,6 +2,8 @@ import { Link } from 'react-router';
 import './compo.css'
 import { Dropdown } from './dropdown';
 
+// ?this is first page horizontal trnding card 
+
 export function Trandingcard({data}){
 console.log(data);
 

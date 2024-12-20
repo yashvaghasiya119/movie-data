@@ -1,6 +1,7 @@
 .route{
     width: 100vw;
-    height: 115vh;
+    /* height: 115vh; */
+    height: 100vh;
 }
 .home{
     width: 100%;
