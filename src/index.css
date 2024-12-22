@@ -68,7 +68,7 @@ font-weight: 600    ;
     height: 7px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
 }
 

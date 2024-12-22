@@ -145,8 +145,7 @@
     height: 100%;
     margin-top: 1.4vw;
     display: flex;
-    /* overflow-y: visible; */
-    /* overflow-x: auto; */
+  
 }
 
 .all_tranding_cards {
@@ -256,11 +255,11 @@ select {
 /* Tranding page  */
 .t-page-main{
     width: 100vw;
-    height: 100vh;
+    /* height: 1000vh; */
     background-color: black;
     color: white;
-    overflow: hidden;
-    overflow-y: auto;
+    /* overflow-y: hidden; 
+    overflow-y: auto; */
 }
 .t-page-heading{
     display: flex;

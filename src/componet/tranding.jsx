@@ -5,7 +5,7 @@ import { Dropdown } from './dropdown';
 // ?this is first page horizontal trnding card 
 
 export function Trandingcard({data}){
-console.log(data);
+// console.log(data);
 
     return<>
     <div className="tranding-main-card">
