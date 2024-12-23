@@ -323,6 +323,7 @@ select {
 @media (max-width:600px) {
     .s-tranding-main{
         grid-template-columns: auto auto auto;
+        width: 90vw;
     }
     .s-tranding-loop{
         width: 30vw;
@@ -331,6 +332,11 @@ select {
      .s-tranding-loop:hover{
         scale: 1.1;
         background-position: left top;
+     }
+     select {
+        font-size: 2vw;
+        width: 14vw;
+        height: 3vh;
      }
 }
 .pagebutton{

@@ -8,7 +8,7 @@ import { Dropdown } from "../componet/dropdown"
 import { Loader } from "../componet/loading"
 
 export function Home() {
-  document.title = "Home page"
+  document.title = "HOME PAGE"
 
   let [wallpaper, setwallpaper] = useState(null)
   let [tranding, setTranding] = useState(null)

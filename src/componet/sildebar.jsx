@@ -12,8 +12,8 @@ export function Sildebar() {
                 {/* <span className="left-span-2">New feed</span> */}
                 <div className="all-links">
                     <Link to={'/trandingdata'} className="link"><i className="ri-fire-fill gap"></i> Tranding</Link>
-                    <Link className="link"><i className="ri-bard-fill gap"></i> Popular</Link>
-                    <Link className="link"><i className="ri-movie-fill gap"></i> Movies</Link>
+                    <Link to={'./popular'} className="link"><i className="ri-bard-fill gap"></i> Popular</Link>
+                    <Link  to={'./movie'} className="link"><i className="ri-movie-fill gap"></i> Movies</Link>
                     <Link className="link"><i className="ri-tv-2-fill gap"></i> Tv show</Link>
                     <Link className="link"><i className="ri-team-fill gap"></i> People</Link>
                     <hr style={{border:"2px solid grey ",width:"100%"}}/>
