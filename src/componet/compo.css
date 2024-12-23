@@ -258,8 +258,8 @@ select {
     /* height: 1000vh; */
     background-color: black;
     color: white;
-    /* overflow-y: hidden; 
-    overflow-y: auto; */
+
+    margin:0 auto;
 }
 .t-page-heading{
     display: flex;
@@ -278,19 +278,21 @@ select {
 .s-tranding-main{
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     margin: 0 auto;
     padding: 0 5vw;
-
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    gap: 2vw 2vw;
 
 }
-.s-tranding-loop{
+/* for display flex  */
+/* .s-tranding-loop{
     width: 19%;
     height: 58%;
     margin-bottom: 2vh;
-    /* background-color: red;
-    border: 2px solid black; */
+ 
 }
 .s-tranding-loop img{
     width: 10%;
@@ -303,6 +305,33 @@ select {
 }
 .s-tranding-loop h1{
     font-size: 1vw;
+} */
+
+.s-tranding-loop{
+   width: 19vw;
+   height: 55vh;
+    /* background: red; */
+}
+.s-tranding-loop img{
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+}
+.s-tranding-loop h1{
+    font-size: 1vw;
+}
+@media (max-width:600px) {
+    .s-tranding-main{
+        grid-template-columns: auto auto auto;
+    }
+    .s-tranding-loop{
+        width: 30vw;
+        height: 25vh;
+     }
+     .s-tranding-loop:hover{
+        scale: 1.1;
+        background-position: left top;
+     }
 }
 .pagebutton{
     width: 100vw;
