@@ -11,7 +11,7 @@ import { Trandingpagecards } from "./trandingpagecard";
 
 
 export function Movie(){
-    let [catagory, setcatogary] = useState("now_playing");
+    let [catagory, setcatogary] = useState("upcoming");
     let [movie, setmovie] = useState([]);
     let [loading, setloading] = useState(false);
     let [page, setpage] = useState(1);

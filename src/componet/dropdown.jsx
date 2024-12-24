@@ -19,5 +19,3 @@ export function Dropdown({ title, options,func }) {
         </div>
     </>
 }
-{/* <option value="movie">Movie</option>
-<option value="tv">TV Show</option> */}
