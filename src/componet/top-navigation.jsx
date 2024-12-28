@@ -108,7 +108,7 @@ export function Navigation() {
       <div className="searchitem">
       
           {icon ?data1.map((cur, index) => (
-            <Link key={index} className="navlink">
+            <Link to={`/${cur.media_type }/details/${cur.id}`} key={index} className="navlink">
               <img src={ cur.backdrop_path || cur.profile_path ? `https://image.tmdb.org/t/p/original/${cur.backdrop_path || cur.profile_path} ` : noimg}  />
               <span>{cur.name || cur.title || cur.original_name || cur.original_title}</span>
             </Link>

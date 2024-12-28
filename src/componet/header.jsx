@@ -18,7 +18,7 @@ export function Header({ data }) {
         }} >
             <div className="header_box">
                 <h1>{data.name || data.title || data.original_name || data.original_title}</h1>
-                <p>{data.overview.slice(0, 250)} <Link style={{ color: "#6556cd" }}>more...</Link></p>
+                <p>{data.overview.slice(0, 250)} <Link to={`/${data.media_type }/details/${data.id}`} style={{ color: "#6556cd" }}>more...</Link></p>
                 <p className='second_pera_header'>
                     <span className='header_span_1'> <i className="ri-calendar-schedule-fill ic"></i> {data.release_date || "No Information"}</span>
                     <span className='header_span_1'> <i className="ri-movie-2-fill ic icon2"></i> {data.media_type}</span>

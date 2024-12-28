@@ -65,7 +65,7 @@ export function Movie(){
          <div className="t-page-main">
                   <div className="t-page-heading">
                       <i className="ri-arrow-left-fill" onClick={() => navigate(-1)}></i>
-                      <span>Movie</span>
+                      <span>Movie </span>
                       <Navigation />
                       <Dropdown title="shows" options={["populer", "top_rated", "now_playing","upcoming"]} func={(e) => setcatogary(e.target.value)} />
                   </div>
@@ -78,7 +78,7 @@ export function Movie(){
                       loader={loading ? <h4>Loading...</h4> : null}  // Show loader only when data is being fetched
                   // endMessage={<h1 style={{color:'white'}}>No more data to load</h1>}  // End message when all data is loaded
                   >
-                      {movie && <Trandingpagecards data={movie} />}
+                      {movie && <Trandingpagecards data={movie} title= "all"/>}
                   </InfiniteScroll>
               </div>
        

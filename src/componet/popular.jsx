@@ -78,7 +78,7 @@ export function Populer() {
                 loader={loading ? <h4>Loading...</h4> : null}  // Show loader only when data is being fetched
             // endMessage={<h1 style={{color:'white'}}>No more data to load</h1>}  // End message when all data is loaded
             >
-                {popular && <Trandingpagecards data={popular} />}
+                {popular && <Trandingpagecards data={popular} title="people"/>}
             </InfiniteScroll>
         </div>
     </>

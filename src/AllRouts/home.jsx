@@ -49,7 +49,7 @@ export function Home() {
           <h1 className='trandig_heading'>Tranding</h1>
           <Dropdown title="filter" options={["tv", "movie", "all"]} func={(e) => setcatogary(e.target.value)} />
         </div>
-        <Trandingcard data={tranding} catagory={setcatogary} />
+        <Trandingcard data={tranding} title="all" />
       </div>
     </div>
       : <Loader />}
