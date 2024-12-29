@@ -15,10 +15,10 @@ export const moviecard = (id)=>async (dispatch,getstate)=>{
             details:detail.data,
             externalid:externalid.data,
             similar:similar.data.results,
-            watchprovider:watchprovider.data.results,
+            watchprovider:watchprovider.data.results.IN,
             videos:videos.data.results.find((cur)=>cur.type === "Trailer")
         }
-        // console.log(alldata);
+        console.log(alldata);
         dispatch(loadmovie(alldata))
         
     } catch (error) {

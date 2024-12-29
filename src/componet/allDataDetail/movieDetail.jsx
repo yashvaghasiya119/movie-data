@@ -84,11 +84,39 @@ export function Moviedetails() {
                         <a target="_blank" href={`https://www.wikidata.org/wiki/${data.externalid.wikidata_id}`} ><i className="ri-external-link-line"></i></a>
                         <a target="_blank" href={`https://www.imdb.com/title/${data.externalid.imdb_id}`} >IMDB</a>
                     </div>
-                {/* part 2 details and poster  */}
-                <div className="mycard">
-                <img src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
-                </div>
+                    {/* part 2 details and poster  */}
+                    <div className="mycard">
+                        <img src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
+                    </div>
 
+                    {/* part 3 avliabl */}
+                    {data.watchprovider && data.watchprovider.buy &&
+                        <div className="Avliable">
+                            <h3>Avliable on.buy</h3>
+                            {data.watchprovider.buy.map((cur)=>{
+                               return  <img src={ `https://image.tmdb.org/t/p/original/${cur.logo_path}`} alt="" />
+                                
+                            })}
+                        </div>
+                    }
+                    {data.watchprovider && data.watchprovider.rent &&
+                        <div className="Avliable">
+                            <h3>Avliable on rent</h3>
+                            {data.watchprovider.rent.map((cur)=>{
+                               return  <img src={ `https://image.tmdb.org/t/p/original/${cur.logo_path}`} alt="" />
+                                
+                            })}
+                        </div>
+                    }
+                    {data.watchprovider && data.watchprovider.flatrate &&
+                        <div className="Avliable">
+                            <h3>Avliable on flatrate</h3>
+                            {data.watchprovider.flatrate.map((cur)=>{
+                               return  <img src={ `https://image.tmdb.org/t/p/original/${cur.logo_path}`} alt="" />
+                                
+                            })}
+                        </div>
+                    }
 
                 </div>
                     : <Loader />
