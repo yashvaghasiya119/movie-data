@@ -356,3 +356,36 @@ select {
 .rate{
     font-size: 1vw;
 }
+
+/* moviedetails's css ' */
+
+.moviedetail_handleimg{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* filter: blur(1px) opacity(0.9); */
+}
+.all-diraction{
+    width: 100vw;
+    height: 4vh;
+    padding: 2vw ;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+.all-diraction *{
+    padding: 2vw;
+    color: white;
+    text-decoration: none;
+    transition: all .8s;
+}
+.all-diraction *:hover{
+    color: black;
+}
+
+.mycard img {
+    width: 15vw;
+    height: 45vh;
+    margin-top: 4vh;
+    margin-left: 10vw;
+}

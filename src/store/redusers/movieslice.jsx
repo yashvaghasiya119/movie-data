@@ -18,3 +18,4 @@ let movieslice = createSlice({
 export default movieslice.reducer
 
 export let {loadmovie,removemovie} = movieslice.actions
+

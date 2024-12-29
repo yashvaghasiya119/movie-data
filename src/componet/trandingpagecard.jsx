@@ -6,8 +6,6 @@ import './compo.css'
 // this is part of trandingdata cmponet
 
 export function Trandingpagecards({data,title}){
-    console.log(title);
-    
     
     return<>
     <div className="s-tranding-main">

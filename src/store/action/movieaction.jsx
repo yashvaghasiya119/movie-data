@@ -1,3 +1,4 @@
+import { all } from "axios";
 import { da } from "../../componet/axiosdata";
 import { loadmovie } from "../redusers/movieslice";
 
@@ -11,13 +12,13 @@ export const moviecard = (id)=>async (dispatch,getstate)=>{
         let videos =  await da.get(`/movie/${id}/videos`)
       
         let alldata = {
-            detail:detail.data,
+            details:detail.data,
             externalid:externalid.data,
             similar:similar.data.results,
             watchprovider:watchprovider.data.results,
             videos:videos.data.results.find((cur)=>cur.type === "Trailer")
         }
-        console.log(alldata);
+        // console.log(alldata);
         dispatch(loadmovie(alldata))
         
     } catch (error) {
@@ -25,3 +26,4 @@ export const moviecard = (id)=>async (dispatch,getstate)=>{
         
     }
 }
+
