@@ -379,7 +379,8 @@ select {
 
 .moviedetail_handleimg {
     width: 100vw;
-    height: 100vh;
+    height: 140vh;
+    /* overflow-y: auto; */
     display: flex;
     flex-direction: column;
     /* filter: blur(1px) opacity(0.9); */
@@ -409,21 +410,70 @@ select {
     height: 45vh;
     margin-top: 4vh;
     margin-left: 10vw;
+    filter: contrast(130%);
 }
 
+.mycard {
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+.contant {
+    margin-top: -3vh;
+    margin-left: 5vw;
+    max-width: 60vw;
+}
+
+.c-h1 {
+    font-size: 2.3vw;
+    font-weight: 900;
+    color: white;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: .2vw;
+    word-spacing: .4vw;
+}
+.contant span {
+    font-size: 1vw;
+}
+.tagline{
+    font-size: 1.4vw;
+    font-style: italic;
+    color: white;
+}
+.h1-overview{
+    color: white;
+    font-size: 1.2vw;
+}
+.p-overview{
+    font-size: 1vw;
+    color: white;
+}
 .Avliable h3 {
     font-size: 1.2vw;
     color: white;
     width: 10vw;
 }
-.Avliable{
+.recomand-h1{
+    font-size: 1.5vw;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}
+.oneline{
+    display: flex;
+    font-size: .6vw;
+    color: white;
+    column-gap: 2vw;
+}
+.Avliable {
     margin-left: 5vw;
     margin-top: 3vh;
     display: flex;
     width: 35vw;
     row-gap: 2vw;
 }
-.Avliable img{
+
+.Avliable img {
     width: 3vw;
     margin-left: 1.3vw;
     object-fit: contain;
