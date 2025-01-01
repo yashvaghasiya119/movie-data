@@ -152,9 +152,10 @@
 
 .all_tranding_cards {
     min-width: 20%;
+    height: 30vh;
     /* background-color: red; */
-    overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
     color: white;
     margin-left: 1vw;
 }
@@ -379,11 +380,11 @@ select {
 
 .moviedetail_handleimg {
     width: 100vw;
-    height: 140vh;
-    /* overflow-y: auto; */
+    height: 170vh;
     display: flex;
     flex-direction: column;
     /* filter: blur(1px) opacity(0.9); */
+    position: relative;
 }
 
 .all-diraction {
@@ -415,7 +416,7 @@ select {
 
 .mycard {
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
 }
 
 .contant {
@@ -432,39 +433,47 @@ select {
     letter-spacing: .2vw;
     word-spacing: .4vw;
 }
+
 .contant span {
     font-size: 1vw;
 }
-.tagline{
+
+.tagline {
     font-size: 1.4vw;
     font-style: italic;
     color: white;
 }
-.h1-overview{
+
+.h1-overview {
     color: white;
     font-size: 1.2vw;
 }
-.p-overview{
+
+.p-overview {
     font-size: 1vw;
     color: white;
 }
+
 .Avliable h3 {
     font-size: 1.2vw;
     color: white;
     width: 10vw;
 }
-.recomand-h1{
+
+.recomand-h1 {
     font-size: 1.5vw;
     color: white;
     text-align: center;
     font-weight: 900;
 }
-.oneline{
+
+.oneline {
     display: flex;
     font-size: .6vw;
     color: white;
     column-gap: 2vw;
 }
+
 .Avliable {
     margin-left: 5vw;
     margin-top: 3vh;
@@ -477,4 +486,40 @@ select {
     width: 3vw;
     margin-left: 1.3vw;
     object-fit: contain;
+}
+
+/* trailer page  */
+.trailer {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    opacity: .96;
+
+    z-index: 100;
+}
+
+.backpage {
+    width: 100vw;
+    height: 3vh;
+    /* background-color: #fff; */
+    color: white;
+    margin-left: 6vw;
+    margin-top: 4vh;
+    font-size: 2vw;
+}
+
+.video_trailer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn_trailer{
+    background-color: #6556cd;
+    color: white;
+    border-radius: 10px;
+    width: 7vw;
+    height: 7vh;
 }

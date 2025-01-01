@@ -8,6 +8,7 @@ import { People } from "./componet/people"
 import { Moviedetails } from "./componet/allDataDetail/movieDetail"
 import { Tvdetails } from "./componet/allDataDetail/tvDetail"
 import { Populardetails } from "./componet/allDataDetail/popularDetail"
+import { Trailer } from "./componet/trailer"
 
 
 function App() {
@@ -19,7 +20,12 @@ function App() {
         <Route path="/trandingdata" element={<Tranding />} />
         <Route path="/popular" element={<Populer />} />
         <Route path="/movie" element={<Movie />}/>
-          <Route path="/movie/details/:id" element={<Moviedetails/>} />
+          {/* <Route path="/movie/details/:id" element={<Moviedetails/>} >
+            <Route path="/movie/details/:id/trailer" element={<Trailer/>} />
+          </Route> */}
+          <Route path="/movie/details/:id" element={<Moviedetails />}>
+          <Route path="/movie/details/:id/Trailer" element={<Trailer />} />
+        </Route>
         <Route path="/tvshow" element={<Tvshow />}/>
         <Route path="/tv/details/:id" element={<Tvdetails/>}  />
         <Route path="/people" element={<People />} />

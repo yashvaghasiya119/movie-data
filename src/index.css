@@ -2,6 +2,7 @@
     width: 100vw;
     /* height: 115vh; */
     height: 100vh;
+    overflow-y: auto;
 }
 .home{
     width: 100%;

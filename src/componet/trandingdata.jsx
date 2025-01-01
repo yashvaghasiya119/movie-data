@@ -174,6 +174,7 @@ import { useEffect, useState } from 'react';
 import { da } from './axiosdata';
 import { Trandingpagecards } from './trandingpagecard';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { Loader } from './loading';
 
 export function Tranding() {
   let [catagory, setcatogary] = useState("all");
@@ -239,39 +240,43 @@ export function Tranding() {
 
   return (
     <>
+     {
+      tranding ?
       <div className="t-page-main">
-        <div className="t-page-heading">
-          <i
-            className="ri-arrow-left-fill"
-            onClick={() => navigate(-1)}
-          ></i>
-          <span>Tranding</span>
-          <Navigation />
-          <Dropdown
-            title="all"
-            options={["tv", "movie", "all"]}
-            func={(e) => setcatogary(e.target.value)}
-          />
+      <div className="t-page-heading">
+        <i
+          className="ri-arrow-left-fill"
+          onClick={() => navigate(-1)}
+        ></i>
+        <span>Tranding</span>
+        <Navigation />
+        <Dropdown
+          title="all"
+          options={["tv", "movie", "all"]}
+          func={(e) => setcatogary(e.target.value)}
+        />
 
-          <Dropdown
-            title="day"
-            options={["week", "day"]}
-            func={(e) => setduration(e.target.value)}
-          />
-        </div>
-
-        {/* Infinite scroll component */}
-        <InfiniteScroll
-          dataLength={tranding.length} // Length of the current list
-          next={fetchMoreData} // Function to load more data
-          hasMore={hasMore} // Disable scroll when no more data is available
-          loader={loading ? <h4>Loading...</h4> : null} // Show loader only when data is being fetched
-          // endMessage={<h1 style={{ color: "white" }}>No more data to load</h1>} // End message when all data is loaded
-        >
-          {/* Render the cards */}
-          {tranding && <Trandingpagecards data={tranding}  title={catagory}/>}
-        </InfiniteScroll>
+        <Dropdown
+          title="day"
+          options={["week", "day"]}
+          func={(e) => setduration(e.target.value)}
+        />
       </div>
+
+      {/* Infinite scroll component */}
+      <InfiniteScroll
+        dataLength={tranding.length} // Length of the current list
+        next={fetchMoreData} // Function to load more data
+        hasMore={hasMore} // Disable scroll when no more data is available
+        loader={loading ? <h4>Loading...</h4> : null} // Show loader only when data is being fetched
+        // endMessage={<h1 style={{ color: "white" }}>No more data to load</h1>} // End message when all data is loaded
+      >
+        {/* Render the cards */}
+        {tranding && <Trandingpagecards data={tranding}  title={catagory}/>}
+      </InfiniteScroll>
+    </div>
+      :<Loader/>
+     }
     </>
   );
 }
