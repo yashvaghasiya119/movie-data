@@ -206,11 +206,11 @@ export function Moviedetails() {
                   <h1>Users score</h1>
                   <h1>{data.details.release_date}</h1>
                   <h1>{data.details.genres.map(c => c.name).join(" , ")}</h1>
-                  <h1>{data.details.runtime}min</h1>
+                  <h1>Time: {data.details.runtime}min</h1>
                 </div>
                 <h1 className="tagline">{data.details.tagline}</h1>
                 <h1 className="h1-overview">Overview :</h1>
-                <p className="p-overview">{data.details.overview}</p>
+                <p className="p-overview">{data.details.overview.slice(0,500)}</p>
                 <h1 className="h1-overview">Movie-Translated :</h1>
                 <p className="p-overview">{data.translations.join(" , ")}</p>
                 {/* <Link to ={`/movie/details/${data.details.id}/Trailer`}><button >Play Video</button></Link>  */}

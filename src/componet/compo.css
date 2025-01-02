@@ -153,9 +153,7 @@
 .all_tranding_cards {
     min-width: 20%;
     height: 30vh;
-    /* background-color: red; */
-    /* overflow-x: hidden;
-    overflow-y: hidden; */
+   text-decoration: none;
     color: white;
     margin-left: 1vw;
 }
@@ -257,6 +255,7 @@ select {
     .all_tranding_cards {
         min-width: 50%;
     }
+
 }
 
 /* Tranding page  */
@@ -320,12 +319,13 @@ select {
 .s-tranding-loop {
     width: 19vw;
     height: 55vh;
-    /* background: red; */
+    color: white;
+    text-decoration: none;
 }
 
 .s-tranding-loop img {
     width: 90%;
-    height: 85%;
+    height: 80%;
     object-fit: cover;
 }
 
@@ -379,6 +379,7 @@ select {
 /* moviedetails's css ' */
 
 .moviedetail_handleimg {
+    /* background-color: rgb(0, 0, 0,.7); */
     width: 100vw;
     height: 170vh;
     display: flex;
@@ -415,8 +416,8 @@ select {
 }
 
 .mycard {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .contant {
@@ -469,6 +470,7 @@ select {
 
 .oneline {
     display: flex;
+    width: 100vw;
     font-size: .6vw;
     color: white;
     column-gap: 2vw;
@@ -495,7 +497,6 @@ select {
     background-color: black;
     position: absolute;
     opacity: .96;
-
     z-index: 100;
 }
 
@@ -516,10 +517,99 @@ select {
     align-items: center;
     justify-content: center;
 }
-.btn_trailer{
+
+.btn_trailer {
     background-color: #6556cd;
     color: white;
     border-radius: 10px;
-    width: 7vw;
+    width: 10vw;
     height: 7vh;
+    font-size: 1.4vw;
+}
+
+@media(max-width:600px) {
+    .mycard {
+        grid-template-columns: auto;
+        /* height: 200vh; */
+        font-size: 2.3vw;
+    }
+
+    .contant {
+        margin-top: 2vh; 
+    }
+
+    .mycard img {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    .h1-overview {
+        font-size: 3.6vw;
+    }
+
+    .p-overview {
+        font-size: 2vw;
+    }
+    .btn_trailer {
+        width: 17vw;
+        font-size: 2vw;
+    }
+
+    .oneline {
+        font-size: 1.4vw;
+    }
+
+    .Avliable img {
+        width: 6vw;
+    }
+    .Avliable h3{
+        font-size: 3vw;
+        width: 30vw;
+     }
+     .all_tranding_cards h1 {
+        font-size: 2.5vw;
+    }
+    .all_tranding_cards p{
+        font-size: 2vw;
+        max-width: 91%;
+    }
+    .c-h1{
+        font-size: 4vw;
+    }
+    .navlink img {
+        width: 20vw;
+        height: 7vh;
+    }
+    .t-page-heading span{
+        font-size: x-small;
+        text-align: center;
+    }
+    .navi-main input{
+        font-size: 2vw;
+    }
+    .nav-icon{
+        font-size: 2.7vw;
+    }
+    .t-page-heading i{
+        font-size: 4vw;
+    }
+    .rate{
+        font-size: 1.6vw;
+    }
+    .s-tranding-loop h1{
+        font-size: 2vw;
+    }
+    .video_trailer{
+        max-width: 80vw;
+        margin:  0 auto;
+    }
+    .backpage{
+        font-size: 4vw;
+    }
+    
+}
+@media (min-width: 600px) and (max-width: 1150px) {
+    .contant{
+        margin-top: 3vw;
+    }
 }
