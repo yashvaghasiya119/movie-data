@@ -4,11 +4,11 @@ import { useLocation, useNavigate } from "react-router";
 import { moviecard } from "../store/action/movieaction";
 import { useEffect } from "react";
 
-export function Trailer() {
+export function Tvtrailer() {
     let { pathname } = useLocation()
     let navi = useNavigate()
     const category = pathname.includes("moive") ? "movie" : "tv"
-    let ytvideo = useSelector((state) => state.movie.info.videos.key)
+    let ytvideo = useSelector((state) => state.tv.info.videos.key)
     console.log(ytvideo);
     function back() {
         navi(-1)

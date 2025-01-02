@@ -9,6 +9,8 @@ import { Moviedetails } from "./componet/allDataDetail/movieDetail"
 import { Tvdetails } from "./componet/allDataDetail/tvDetail"
 import { Populardetails } from "./componet/allDataDetail/popularDetail"
 import { Trailer } from "./componet/trailer"
+import { Notfounnd } from "./notfound"
+import { Tvtrailer } from "./componet/tvtrailer"
 
 
 function App() {
@@ -27,9 +29,13 @@ function App() {
           <Route path="/movie/details/:id/Trailer" element={<Trailer />} />
         </Route>
         <Route path="/tvshow" element={<Tvshow />}/>
-        <Route path="/tv/details/:id" element={<Tvdetails/>}  />
+
+        <Route path="/tv/details/:id" element={<Tvdetails/>}  >
+        <Route path="/tv/details/:id/Trailer" element={<Tvtrailer />} />
+        </Route>
         <Route path="/people" element={<People />} />
         <Route path="/people/details/:id" element={<Populardetails/>} />
+        <Route path="*" element={<Notfounnd/>}/>
     </Routes>
   </div >
   </>
