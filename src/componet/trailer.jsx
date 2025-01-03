@@ -20,7 +20,7 @@ export function Trailer() {
                 <i class="ri-arrow-left-fill"> Back</i>
             </div>
             <div className="video_trailer">
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${ytvideo}`} />
+            <ReactPlayer controls url={`https://www.youtube.com/watch?v=${ytvideo}`} />
             </div>
         </div>:<h2 style={{color:"white"}}>Not found</h2>
         }

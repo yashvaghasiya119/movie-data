@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import './compo.css'
 export function Header({ data }) {
 
-    // console.log(data);
+    console.log(data);
 
     return <>
         <div className="headerposter" style={{
@@ -23,7 +23,7 @@ export function Header({ data }) {
                     <span className='header_span_1'> <i className="ri-calendar-schedule-fill ic"></i> {data.release_date || "No Information"}</span>
                     <span className='header_span_1'> <i className="ri-movie-2-fill ic icon2"></i> {data.media_type}</span>
                 </p>
-               <button className='trailer-btn'> <Link className='trailer_link' >Watch Trailer</Link></button>
+               <button className='trailer-btn'> <Link to={`${data.media_type}/details/${data.id}/Trailer`} className='trailer_link' >Watch Trailer</Link></button>
             </div>
         </div>
     </>

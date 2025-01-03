@@ -251,12 +251,7 @@ select {
     align-items: center;
 }
 
-@media (max-width:500px) {
-    .all_tranding_cards {
-        min-width: 50%;
-    }
 
-}
 
 /* Tranding page  */
 .t-page-main {
@@ -386,6 +381,9 @@ select {
     flex-direction: column;
     /* filter: blur(1px) opacity(0.9); */
     position: relative;
+    overflow-y: auto;
+ 
+
 }
 
 .all-diraction {
@@ -527,6 +525,18 @@ select {
     font-size: 1.4vw;
 }
 
+.seasons{
+    display: flex;
+    max-width: 96vw;
+    margin: 0 auto;
+}
+.seasons img{
+    width: 40vw;
+    height: 30vh;
+    margin-right: 2vw;
+}
+
+
 @media(max-width:600px) {
     .mycard {
         grid-template-columns: auto;
@@ -606,10 +616,23 @@ select {
     .backpage{
         font-size: 4vw;
     }
+    .tranding_img{
+        height: 20vh;
+    }
     
 }
 @media (min-width: 600px) and (max-width: 1150px) {
     .contant{
         margin-top: 3vw;
+    }
+}
+@media (max-width:500px) {
+    .all_tranding_cards {
+        min-width: 50%;
+    }
+    .seasons img{
+        min-width: 43vw;
+        height: 20vh;
+        margin-right: 5vw;
     }
 }

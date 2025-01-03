@@ -1,44 +1,43 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router"
-import { moviecard } from "../../store/action/movieaction"
-import { loadmovie, removemovie } from "../../store/redusers/movieslice"
 import { Loader } from "../loading"
 import '../compo.css'
 import { Trandingcard } from "../tranding"
-import { Trailer } from "../trailer"
 import { tvcard } from "../../store/action/tvaction"
 import { removetv } from "../../store/redusers/tvslice"
 
-export function Tvdetails (){
-    let dispatch = useDispatch();
-    let { id } = useParams(); // Extract the movie id from the URL
-    let navigate = useNavigate();
-    let { pathname } = useLocation(); // Get the current location
-  
-    // Select the movie details from the Redux state
-    let data = useSelector(state => state.tv.info);
+export function Tvdetails() {
+  let dispatch = useDispatch();
+  let { id } = useParams(); // Extract the movie id from the URL
+  let navigate = useNavigate();
+  let { pathname } = useLocation(); // Get the current location
+
+  // Select the movie details from the Redux state
+  let data = useSelector(state => state.tv.info);
+  let seasons = useSelector(state => state.tv)
   //   console.log(data);
-      
-    useEffect(() => {
-      dispatch(tvcard(id)); // Dispatch an action to fetch movie details
-      return () => {
-        dispatch(removetv()); // Clean up by removing the movie details when leaving the component
-      };
-    }, [id, dispatch]);
-    return<>
+
+  useEffect(() => {
+    dispatch(tvcard(id)); // Dispatch an action to fetch movie details
+    return () => {
+      dispatch(removetv()); // Clean up by removing the movie details when leaving the component
+    };
+  }, [id, dispatch]);
+  return <>
     <>
       {
         data ? (
           <div className="moviedetail_handleimg" style={{
             background: `linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5),rgba(0,0,0,.7)), url(https://image.tmdb.org/t/p/original/${data.details.backdrop_path} )`,
             width: '100vw',
-            margin: '0 auto',
-            height: "140vh",
+            margin: '-0 auto',
+            height: "190vh",
             backgroundPosition: "center",
-            backgroundSize: "100vw 140vh",
+            // backgroundSize: "100vw 140vh",
             backgroundRepeat: "no-repeat",
-            backdropFilter: 'blur(8px)'
+            backdropFilter: 'blur(8px)',
+            backgroundSize: "cover"
           }}>
             {/* Part 1: Navigation */}
             <div className="all-diraction">
@@ -68,10 +67,10 @@ export function Tvdetails (){
                 <h1 className="h1-overview">Tvshows-Translated :</h1>
                 <p className="p-overview">{data.translations.join(" , ")}</p>
                 {/* <Link to ={`/movie/details/${data.details.id}/Trailer`}><button >Play Video</button></Link>  */}
-            {
-                data.videos ? <Link to ={`/tv/details/${data.details.id}/Trailer`}><button className="btn_trailer" >Play Video</button></Link>:
-                <button  className="btn_trailer" disabled="true">Trailer not avilable</button>
-            }
+                {
+                  data.videos ? <Link to={`/tv/details/${data.details.id}/Trailer`}><button className="btn_trailer" >Play Video</button></Link> :
+                    <button className="btn_trailer" disabled="true">Trailer not avilable</button>
+                }
               </div>
             </div>
 
@@ -103,16 +102,31 @@ export function Tvdetails (){
               </div>
             }
 
-            {/* Part 4: Recommendations */}
+
+            {/* part 4 season */}
+            <hr style={{ backgroundColor: 'white', height: "2px", width: "100%" }} />
+            <h1 className="recomand-h1">All seasons</h1>
+            <div className="seasons">
+              {
+                seasons.info?.details?.seasons.map((c, i) => {
+                    console.log(c);
+                  return <div key={i} >
+                    <img className="tranding_img" src={`https://image.tmdb.org/t/p/original/${c.poster_path}`} alt="" />
+                  </div>
+                })
+              }
+            </div>
+
+            {/* Part 5: Recommendations */}
             <hr style={{ backgroundColor: 'white', height: "2px", width: "100%" }} />
             <h1 className="recomand-h1">Recommendation Shows</h1>
             <Trandingcard data={data.recommendations ? data.recommendations : data.similar} />
 
             {/* Outlet to render nested routes (Trailer) */}
-            <Outlet  />
+            <Outlet />
           </div>
         ) : <Loader /> // Loading state if data is not yet available
       }
     </>
-    </>
+  </>
 }
