@@ -129,7 +129,7 @@
 /* //Tranding page css  */
 .trandig_heading {
     margin: 0;
-    color: white;
+    color: #919ea3;
 }
 
 
@@ -154,7 +154,7 @@
     min-width: 20%;
     height: 30vh;
    text-decoration: none;
-    color: white;
+    color: #919ea3;
     margin-left: 1vw;
 }
 
@@ -258,7 +258,7 @@ select {
     width: 100vw;
     /* height: 1000vh; */
     background-color: black;
-    color: white;
+    color: #919ea3;
 
     margin: 0 auto;
 }
@@ -314,7 +314,7 @@ select {
 .s-tranding-loop {
     width: 19vw;
     height: 55vh;
-    color: white;
+    color: #919ea3;
     text-decoration: none;
 }
 
@@ -419,13 +419,13 @@ select {
 }
 
 .contant {
-    margin-top: -3vh;
-    margin-left: 5vw;
+    /* margin-top: -3vh; */
+    /* margin-left: 5vw; */
     max-width: 60vw;
 }
 
 .c-h1 {
-    font-size: 2.3vw;
+    font-size: 2vw;
     font-weight: 900;
     color: white;
     font-family: "Bebas Neue", serif;
@@ -535,6 +535,52 @@ select {
     height: 30vh;
     margin-right: 2vw;
 }
+.person-width{
+    max-width: 70vw;
+    /* margin:  0 auto; */
+}
+.person-back{
+    font-size: 1.7vw;
+}
+.linebrack{
+    margin-top: 2vh;
+    width: 17%;
+    height: .2vh;
+    background-color: white;
+}
+.social-media {
+    color: white;
+    text-decoration: none;
+}
+.social-media-icon{
+    color: #919ea3;
+    margin-left: 2vw;
+}
+
+.links{
+    margin-top: 4vh;
+    margin-left: 8vw;
+}
+.personinfo{
+    margin-left: 10vw;
+    width: 20vw;
+}
+.personinfo h1 , .biography h1{
+    color: #919ea3;
+    font-size: 1.5vw;
+    font-family: "Teko";
+    letter-spacing: .12vw;
+}
+.personinfo p , .biography p{
+    margin-top: -1vh;
+    font-weight: 600;
+    font-size: 1.3vw;
+    color: #919ea3;
+}
+.personinfo{
+    color: #919ea3;
+    font-weight: 200;
+}
 
 
 @media(max-width:600px) {
@@ -546,6 +592,7 @@ select {
 
     .contant {
         margin-top: 2vh; 
+        margin-left: 5vw;
     }
 
     .mycard img {
