@@ -1,8 +1,13 @@
+html{
+    background-color: #1F1E24;;
+}
+
 .route{
     width: 100vw;
     /* height: 115vh; */
-    height: 100vh;
+    height: 124vh;
     overflow-y: auto;
+    background-color: #1F1E24;;
 }
 .home{
     width: 100%;
@@ -60,7 +65,6 @@ font-weight: 600    ;
 
 
 
-
 .right{
     width: 80%;
     height: 100%;
@@ -74,3 +78,13 @@ font-weight: 600    ;
     border-radius: 10px;
 }
 
+@media(max-width:600px) {
+    .route{
+        height: 100vh;
+        
+    }
+    ::-webkit-scrollbar{
+        width: 0px;
+        height: 0px;
+    }
+}

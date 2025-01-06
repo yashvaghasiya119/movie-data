@@ -16,7 +16,7 @@ export function Trandingcard({data}){
         <div className="cardpices"> 
             { data && data.map((cur,index)=>{
                 return<NavLink className='all_tranding_cards' to={`/${cur.media_type }/details/${cur.id}`} key={index}>
-               <div key={index} >
+               <div key={index} style={{height:"30vh"}}>
                 <img className='tranding_img' src={ cur.backdrop_path || cur.poster_path ? `https://image.tmdb.org/t/p/original/${cur.backdrop_path || cur.poster_path}` :noimg} alt="" />
                   <h1>{cur.name || cur.title || cur.original_name || cur.original_title}</h1>
             <p>{cur.overview.slice(0, 100)} <Link style={{ color: "#6556cd" }}>more...</Link></p>

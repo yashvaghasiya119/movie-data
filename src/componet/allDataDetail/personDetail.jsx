@@ -40,7 +40,7 @@ export function Populardetails (){
 
       {/* Part 2: Movie Details and Poster */}
       <div className="mycard" >
-        <img src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
+        <img className="front-img" src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
         <div className="contant">
           <h1 className="c-h1" style={{color:"#919ea3"}}>{data.details.name}
           </h1>
@@ -48,10 +48,10 @@ export function Populardetails (){
               <h1>Biography</h1>
               <p>{data.details.biography}</p>
           </div>
-          <h1>Knoe For</h1>
+          <h1 style={{color:"#919ea3"}}>Know For</h1>
+          <Trandingcard data={data.combiencardits.cast}/>
         </div>
       </div>
-          <Trandingcard data={data.combiencardits.cast}/>
       <div className="social-media ">
         {/* <hr className="linebrack"/> */}
         <div className="links">
@@ -63,7 +63,7 @@ export function Populardetails (){
 
      {/* part3 personal info */}
      <div className="personinfo">
-      <h1>Person Info</h1>
+      <h1>More Info</h1>
       <div>
         <h1>Know For</h1>
         <p>{data.details.known_for_department}</p>
@@ -82,7 +82,7 @@ export function Populardetails (){
       </div>
       <div>
         <h1>Also Know AS</h1>
-        <p>{data.details.also_known_as.join(", ")}</p>
+        <p className="othername">{data.details.also_known_as.join(", ")}</p>
       </div>
       
      </div>

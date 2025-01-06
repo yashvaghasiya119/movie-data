@@ -50,6 +50,7 @@ export function Home() {
           <Dropdown title="filter" options={["tv", "movie", "all"]} func={(e) => setcatogary(e.target.value)} />
         </div>
         <Trandingcard data={tranding} title="all" />
+      <p className="copyright" style={{color:"white"}}>All 	&#169; copyright reserved by yash vaghaiya 2025</p>
       </div>
     </div>
       : <Loader />}

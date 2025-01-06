@@ -49,7 +49,7 @@ export function Tvdetails() {
 
             {/* Part 2: Movie Details and Poster */}
             <div className="mycard">
-              <img src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
+              <img className="front-img" src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
               <div className="contant">
                 <h1 className="c-h1">{data.details.original_title || data.details.name}
                   <span>({data.details.first_air_date.split("-")[0]})</span>
@@ -104,7 +104,7 @@ export function Tvdetails() {
 
 
             {/* part 4 season */}
-            <hr style={{ backgroundColor: 'white', height: "2px", width: "100%" }} />
+            {/* <hr style={{ backgroundColor: 'white', height: "2px", width: "100%" }} />
             <h1 className="recomand-h1">All seasons</h1>
             <div className="seasons">
               {
@@ -115,7 +115,7 @@ export function Tvdetails() {
                   </div>
                 })
               }
-            </div>
+            </div> */}
 
             {/* Part 5: Recommendations */}
             <hr style={{ backgroundColor: 'white', height: "2px", width: "100%" }} />

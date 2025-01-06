@@ -135,7 +135,8 @@
 
 .tranding-main-card {
     width: 96%;
-    height: 45%;
+    /* height: 45%; */
+    height: 26%;
     padding: 0 1vw;
     overflow-y: hidden;
     overflow-x: auto;
@@ -152,7 +153,7 @@
 
 .all_tranding_cards {
     min-width: 20%;
-    height: 30vh;
+    height: 100vh;
    text-decoration: none;
     color: #919ea3;
     margin-left: 1vw;
@@ -404,13 +405,14 @@ select {
 .all-diraction *:hover {
     color: black;
 }
-
-.mycard img {
-    width: 15vw;
-    height: 45vh;
-    margin-top: 4vh;
+.front-img{
     margin-left: 10vw;
+    width: 14vw;
+   height: 50vh;
+    margin-top: 4vh;
     filter: contrast(130%);
+}
+.mycard img {
 }
 
 .mycard {
@@ -528,7 +530,10 @@ select {
 .seasons{
     display: flex;
     max-width: 96vw;
+    height: 56vh;
     margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: visible;
 }
 .seasons img{
     width: 40vw;
@@ -537,7 +542,7 @@ select {
 }
 .person-width{
     max-width: 70vw;
-    /* margin:  0 auto; */
+    display: flex;
 }
 .person-back{
     font-size: 1.7vw;
@@ -551,6 +556,7 @@ select {
 .social-media {
     color: white;
     text-decoration: none;
+    margin-top: -60vh;
 }
 .social-media-icon{
     color: #919ea3;
@@ -558,12 +564,18 @@ select {
 }
 
 .links{
-    margin-top: 4vh;
     margin-left: 8vw;
+    margin-top: -8vw;
+    font-size: 2vw;
+}
+.links a , .s-tranding-main a{
+    text-decoration: none;
+
 }
 .personinfo{
     margin-left: 10vw;
     width: 20vw;
+    margin-top: -5vh;
 }
 .personinfo h1 , .biography h1{
     color: #919ea3;
@@ -582,7 +594,16 @@ select {
     font-weight: 200;
 }
 
-
+.copyright{
+    width: 100vw;
+    position: absolute;
+    bottom: -20vh;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+}
 @media(max-width:600px) {
     .mycard {
         grid-template-columns: auto;
@@ -597,7 +618,8 @@ select {
 
     .mycard img {
         width: 50vw;
-        height: 30vh;
+        /* height: 30vh; */
+        height: 22vh;
     }
 
     .h1-overview {
@@ -624,8 +646,11 @@ select {
         width: 30vw;
      }
      .all_tranding_cards h1 {
-        font-size: 2.5vw;
-    }
+         font-size: 2.5vw;
+        }
+        .all_tranding_cards{
+            height: 100vh;
+        }
     .all_tranding_cards p{
         font-size: 2vw;
         max-width: 91%;
@@ -664,9 +689,45 @@ select {
         font-size: 4vw;
     }
     .tranding_img{
-        height: 20vh;
+        /* height: 20vh; */
+        height: 16vh;
     }
-    
+    .person-back{
+        font-size: 6vw;
+    }
+    .biography{
+        width: 90vw;
+    }
+    .biography p{
+        margin-top: 1vh;
+        font-size: 2vw;
+    }
+    .biography h1{
+        font-size: 4vw;
+    }
+    .copyright{
+        bottom: 0;
+    }
+    .personinfo {
+        margin-top: 0;
+    }
+    .social-media{
+        margin-top: -65vh;
+    }
+    .links{
+        font-size: 5vw;
+    }
+    .personinfo p{
+        margin-top: 1vh;
+        font-size: 1.5vh;
+    }
+    .personinfo h1{
+        font-size: 4vw;
+    }
+    .othername{
+        width: 80vw;
+    }
+
 }
 @media (min-width: 600px) and (max-width: 1150px) {
     .contant{
@@ -679,7 +740,10 @@ select {
     }
     .seasons img{
         min-width: 43vw;
-        height: 20vh;
+        height: 29vh;
         margin-right: 5vw;
+    }
+    .tranding-main-card{
+        width: 90vw;
     }
 }

@@ -196,7 +196,7 @@ export function Moviedetails() {
 
             {/* Part 2: Movie Details and Poster */}
             <div className="mycard">
-              <img src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
+              <img className="front-img" src={`https://image.tmdb.org/t/p/original/${data.details.backdrop_path || data.details.poster_path || data.details.profile_path}`} alt="" />
               <div className="contant">
                 <h1 className="c-h1">{data.details.original_title}
                   <span>({data.details.release_date.split("-")[0]})</span>
